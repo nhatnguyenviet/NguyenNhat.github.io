@@ -194,6 +194,28 @@ content:
             type: string
           - name: text
             component: bi_line
+      - name: scholar
+        label: Link Google Scholar
+        type: string
+      - name: publications
+        label: Công bố khoa học / Publications (mới nhất ở trên)
+        type: object
+        list: true
+        fields:
+          - name: year
+            type: string
+          - name: title
+            label: Tên bài báo
+            type: string
+          - name: authors
+            label: Tác giả (tên bạn sẽ tự in đậm)
+            type: text
+          - name: venue
+            label: Tạp chí, tập(số), trang
+            type: string
+          - name: link
+            label: Link (DOI hoặc trang bài báo)
+            type: string
       - name: education
         label: Học vấn / Education
         type: object
@@ -234,6 +256,7 @@ content:
           - { name: highlights, type: boolean }
           - { name: about, type: boolean }
           - { name: research, type: boolean }
+          - { name: publications, type: boolean }
           - { name: education, type: boolean }
           - { name: slices, type: boolean }
           - { name: photos, type: boolean }

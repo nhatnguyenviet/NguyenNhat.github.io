@@ -80,6 +80,37 @@
       }
     }
   ],
+  "scholar": "https://scholar.google.com/citations?user=zA6omk8AAAAJ",
+  "publications": [
+    {
+      "year": "2026",
+      "title": "Synthesis of SnS₂ Nanosheets for Gas Sensors: Effect of Hydrothermal Temperatures",
+      "authors": "To Thi Nguyet, Nguyen Pham Yen Nhi, Dang Thi Thu Ha, Pham Van Tong, Nguyen Viet Nhat, Pham Xuan Hien, Tran Nguyen Anh Quan, Chu Manh Hung, Nguyen Van Duy, Mingzhi Jiao, Chu Thi Xuan, Nguyen Duc Hoa",
+      "venue": "Journal of Electronic Materials 55(10), 8487–8498",
+      "link": "https://doi.org/10.1007/s11664-026-12979-8"
+    },
+    {
+      "year": "2026",
+      "title": "Highly sensitive and dual-selective gas sensing using WS₂ nanosheets for NO₂ and NH₃ detection at low temperature",
+      "authors": "Ho Huu Hau, Nguyen Viet Nhat, Luong Thi Theu, Phung Thi Viet Bac, Dinh Van An, Pham Van Thang, Hoang Si Hong, Nguyen Xuan Thai, Nguyen Duc Chien, Nguyen Van Duy, Nguyen Duc Hoa, Chu Manh Hung",
+      "venue": "Sensors and Actuators A: Physical, 117464",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0924424726000154"
+    },
+    {
+      "year": "2026",
+      "title": "Instant synthesis of porous SnO₂ nanosheets for ultrahigh sensitive NO₂ gas sensors",
+      "authors": "Nguyen Viet Nhat, Nguyen Thi Hong Van, Nguyen Cao Nam, Nguyen Van Duy, Chu Thi Xuan, Chu Manh Hung, Trinh Minh Ngoc, Nguyen Duc Hoa",
+      "venue": "Advances in Natural Sciences: Nanoscience and Nanotechnology 17(2)",
+      "link": ""
+    },
+    {
+      "year": "2026",
+      "title": "Morphology-controlled synthesis of MoSe₂ nanostructures for highly sensitive and low-temperature NO₂ gas sensor applications",
+      "authors": "Nguyen Viet Nhat, Nguyen Thi Hong Van, Nguyen Duc Chien, Nguyen Van Duy, Nguyen Duc Hoa, Chu Manh Hung",
+      "venue": "Communications in Physics 36(2)",
+      "link": "https://vjs.ac.vn/cip/article/view/23767"
+    }
+  ],
   "education": [
     {
       "date": "2026.10–",
@@ -141,6 +172,10 @@
     {
       "label": "facebook",
       "url": "https://www.facebook.com/nhat.nguyenviet.735"
+    },
+    {
+      "label": "google scholar",
+      "url": "https://scholar.google.com/citations?user=zA6omk8AAAAJ"
     }
   ],
   "show": {
@@ -151,7 +186,8 @@
     "education": true,
     "slices": true,
     "photos": true,
-    "contact": true
+    "contact": true,
+    "publications": true
   },
   "theme": {
     "background": "#f4f4ef",

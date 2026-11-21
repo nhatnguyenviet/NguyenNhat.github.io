@@ -1,22 +1,10 @@
 [
   {
-    "slug": "hello-world",
-    "title": "Hello, world — how a gas sensor \"smells\"",
+    "slug": "2026-11-21-updating",
+    "title": "Updating.....",
     "date": "2026-11-21",
     "lang": "en",
-    "summary": "First note, and a tiny bit of sensor theory.",
-    "tags": [
-      "science"
-    ]
-  },
-  {
-    "slug": "xin-chao",
-    "title": "Xin chào — cảm biến khí \"ngửi\" như thế nào?",
-    "date": "2026-11-21",
-    "lang": "vi",
-    "summary": "Bài viết đầu tiên, và một chút lý thuyết về cảm biến.",
-    "tags": [
-      "khoa học"
-    ]
+    "summary": "",
+    "tags": []
   }
 ]

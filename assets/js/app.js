@@ -9,7 +9,7 @@
 const UI = {
   en: {
     home: "home", writing: "writing", photos: "photos",
-    recently: "recently", highlights: "highlights", about: "about me", research: "research", education: "education",
+    recently: "recently", highlights: "highlights", about: "about me", research: "research", publications: "publications", all_scholar: "Full list on Google Scholar", education: "education",
     slices: "slices of my life", photo_diary: "photo diary", contact: "come by",
     full_cv: "Full resume", notes: "notes", other_lang: "Tiếng Việt",
     other_posts: "Bài viết tiếng Việt", writing_lead: "Stories, notes and theories I've learned — newest first.",
@@ -19,7 +19,7 @@ const UI = {
   },
   vi: {
     home: "trang chủ", writing: "bài viết", photos: "ảnh",
-    recently: "gần đây", highlights: "sự kiện nổi bật", about: "về mình", research: "nghiên cứu", education: "học vấn",
+    recently: "gần đây", highlights: "sự kiện nổi bật", about: "về mình", research: "nghiên cứu", publications: "công bố khoa học", all_scholar: "Danh sách đầy đủ trên Google Scholar", education: "học vấn",
     slices: "những lát cắt cuộc sống", photo_diary: "nhật ký ảnh", contact: "ghé chơi",
     full_cv: "CV đầy đủ", notes: "ghi chép", other_lang: "English",
     other_posts: "Posts in English", writing_lead: "Câu chuyện, ghi chép và lý thuyết mình học được — mới nhất ở trên.",
@@ -162,6 +162,18 @@ async function pageHome(site) {
   if (show.about !== false) s.push(`<section id="about"><h2>${U.about}</h2>${md(tr(site.about))}
       ${site.about_photo ? `<figure><img src="${esc(src(site.about_photo))}" alt=""><figcaption>${esc(tr(site.about_caption))}</figcaption></figure>` : ""}</section>`);
   if (show.research !== false && site.research?.length) s.push(`<section id="research"><h2>${U.research}</h2>${datedList(site.research)}</section>`);
+  if (show.publications !== false && site.publications?.length) {
+    const me = esc(site.name || "");
+    s.push(`<section id="publications"><h2>${U.publications}</h2><ol class="pubs">
+      ${site.publications.map(p => `<li>
+        <span class="date">${esc(p.year)}</span>
+        <div>
+          <div class="pub-title">${p.link ? `<a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</div>
+          <div class="pub-authors">${me ? esc(p.authors).split(me).join(`<b>${me}</b>`) : esc(p.authors)}</div>
+          <div class="pub-venue">${esc(p.venue)}</div>
+        </div></li>`).join("")}</ol>
+      ${site.scholar ? `<p class="after"><a href="${esc(site.scholar)}" target="_blank" rel="noopener">${U.all_scholar} →</a></p>` : ""}</section>`);
+  }
   if (show.education !== false && site.education?.length) s.push(`<section id="education"><h2>${U.education}</h2>${datedList(site.education)}
       ${site.cv ? `<p class="after">${U.full_cv}: <a href="${esc(src(site.cv))}">CV (pdf)</a></p>` : ""}</section>`);
   if (show.slices !== false && site.slices?.length) s.push(`<section id="slices"><h2>${U.slices}</h2>

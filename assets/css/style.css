@@ -150,3 +150,14 @@ article .banner { margin-bottom: 26px; }
 .hl-main { aspect-ratio: 16 / 9; object-fit: cover; }
 .hl-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
 .hl-thumbs img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* ===== publications ===== */
+ol.pubs { list-style: none; padding: 0; margin: 0; }
+ol.pubs li { display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+ol.pubs li:last-child { border-bottom: none; }
+ol.pubs .date { font-family: var(--mono); font-size: 14px; color: var(--muted); padding-top: 4px; }
+.pub-title { line-height: 1.4; }
+.pub-authors { font-size: .82em; color: var(--muted); margin-top: 4px; line-height: 1.45; }
+.pub-authors b { color: var(--text); font-weight: 600; }
+.pub-venue { font-size: .82em; font-style: italic; color: var(--accent); margin-top: 2px; }
+@media (max-width: 520px) { ol.pubs li, ol.dated li { grid-template-columns: 1fr; gap: 0; } }
