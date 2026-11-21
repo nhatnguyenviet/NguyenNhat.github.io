@@ -9,7 +9,7 @@
 const UI = {
   en: {
     home: "home", writing: "writing", photos: "photos",
-    recently: "recently", about: "about me", research: "research", education: "education",
+    recently: "recently", highlights: "highlights", about: "about me", research: "research", education: "education",
     slices: "slices of my life", photo_diary: "photo diary", contact: "come by",
     full_cv: "Full resume", notes: "notes", other_lang: "Tiếng Việt",
     other_posts: "Bài viết tiếng Việt", writing_lead: "Stories, notes and theories I've learned — newest first.",
@@ -19,7 +19,7 @@ const UI = {
   },
   vi: {
     home: "trang chủ", writing: "bài viết", photos: "ảnh",
-    recently: "gần đây", about: "về mình", research: "nghiên cứu", education: "học vấn",
+    recently: "gần đây", highlights: "sự kiện nổi bật", about: "về mình", research: "nghiên cứu", education: "học vấn",
     slices: "những lát cắt cuộc sống", photo_diary: "nhật ký ảnh", contact: "ghé chơi",
     full_cv: "CV đầy đủ", notes: "ghi chép", other_lang: "English",
     other_posts: "Posts in English", writing_lead: "Câu chuyện, ghi chép và lý thuyết mình học được — mới nhất ở trên.",
@@ -77,7 +77,8 @@ function md(text, inline = false) {
     catch (e) { return esc(tex); }
   });
   // make "/media/..." image and link paths relative
-  return html.replace(/(src|href)="\/(?!\/)/g, '$1="');
+  return html.replace(/(src|href)="\/(?!\/)/g, '$1="')
+             .replace(/<a href="(https?:)/g, '<a target="_blank" rel="noopener" href="$1');   // external links open in a new tab
 }
 
 // ---- Front matter (--- key: value --- ) used by posts
@@ -147,6 +148,17 @@ async function pageHome(site) {
       <h1>${esc(tr(site.site_title))}</h1>
       <p class="lead">${esc(tr(site.tagline))}</p></header>`);
   if (show.timeline !== false && site.timeline?.length) s.push(`<section><h2>${U.recently}</h2>${datedList(site.timeline)}</section>`);
+  if (show.highlights !== false && site.highlights?.length) s.push(`<section id="highlights"><h2>${U.highlights}</h2>
+      ${site.highlights.map(h => {
+        const imgs = [].concat(h.images || []).filter(Boolean), title = tr(h.title);
+        const cap = [h.date, tr(h.place)].filter(Boolean).join(" · ");
+        return `<article class="highlight">
+          ${imgs[0] ? `<img class="hl-main" loading="lazy" src="${esc(src(imgs[0]))}" alt="${esc(title)}" data-cap="${esc(title)}">` : ""}
+          <h3>${esc(title)}</h3>
+          ${cap ? `<div class="meta">${esc(cap)}</div>` : ""}
+          ${md(tr(h.text))}
+          ${imgs.length > 1 ? `<div class="hl-thumbs">${imgs.slice(1).map(im => `<img loading="lazy" src="${esc(src(im))}" alt="${esc(title)}" data-cap="${esc(title)}">`).join("")}</div>` : ""}
+        </article>`; }).join("")}</section>`);
   if (show.about !== false) s.push(`<section id="about"><h2>${U.about}</h2>${md(tr(site.about))}
       ${site.about_photo ? `<figure><img src="${esc(src(site.about_photo))}" alt=""><figcaption>${esc(tr(site.about_caption))}</figcaption></figure>` : ""}</section>`);
   if (show.research !== false && site.research?.length) s.push(`<section id="research"><h2>${U.research}</h2>${datedList(site.research)}</section>`);
@@ -165,6 +177,7 @@ async function pageHome(site) {
     document.querySelectorAll(".chip,.slice").forEach(e => e.classList.remove("on"));
     if (!on) { btn.classList.add("on"); $("#slice-" + btn.dataset.i).classList.add("on"); }
   }));
+  if ($(".highlight img")) lightbox([...document.querySelectorAll(".highlight img")]);
   if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
 }
 

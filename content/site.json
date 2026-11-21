@@ -41,6 +41,29 @@
       }
     }
   ],
+  "highlights": [
+    {
+      "date": "2026.11.09",
+      "place": {
+        "en": "Tokyo",
+        "vi": "Tokyo"
+      },
+      "title": {
+        "en": "Vietnam–Japan Cooperation Documents Exchange Ceremony",
+        "vi": "Lễ trao các văn kiện hợp tác Việt Nam – Nhật Bản"
+      },
+      "text": {
+        "vi": "Ngày 9/11/2026 tại Tokyo, trong khuôn khổ chuyến thăm chính thức Nhật Bản của Tổng Bí thư, Chủ tịch nước Tô Lâm, mình có cơ duyên được tham dự **Diễn đàn Công tư về hợp tác kinh tế và khoa học công nghệ Việt Nam – Nhật Bản** và **Lễ trao các văn kiện hợp tác Việt Nam – Nhật Bản**.\n\nKhoảnh khắc đáng nhớ nhất là được đứng trên sân khấu chụp ảnh lưu niệm cùng Tổng Bí thư, Chủ tịch nước Tô Lâm, lãnh đạo cấp cao của hai nước và các nhà khoa học xuất sắc — những trưởng nhóm nghiên cứu (PI) của các chương trình hợp tác lớn giữa Việt Nam và Nhật Bản. Một trải nghiệm đặc biệt, và cũng là động lực để mình tiếp tục con đường nghiên cứu.\n\nĐọc thêm: [Đồng kiến tạo công nghệ: Định hướng mới của Việt Nam và Nhật Bản — Tuổi Trẻ Online](https://tuoitre.vn/dong-kien-tao-cong-nghe-dinh-huong-moi-cua-viet-nam-va-nhat-ban-100261111154708098.htm)",
+        "en": "On 9 November 2026 in Tokyo, during the official visit to Japan of Tô Lâm, General Secretary of the Communist Party of Vietnam and President of Vietnam, I had the chance to attend the **Vietnam–Japan Public–Private Forum on Economic and Science & Technology Cooperation** and the **Vietnam–Japan Cooperation Documents Exchange Ceremony**.\n\nThe most memorable moment was standing on stage for the commemorative photo with General Secretary and President Tô Lâm, senior leaders of both countries, and outstanding scientists — the principal investigators (PIs) of major Vietnam–Japan cooperation programs. A special experience, and a motivation to keep going on my research path.\n\nRead more (in Vietnamese): [Đồng kiến tạo công nghệ: Định hướng mới của Việt Nam và Nhật Bản — Tuổi Trẻ Online](https://tuoitre.vn/dong-kien-tao-cong-nghe-dinh-huong-moi-cua-viet-nam-va-nhat-ban-100261111154708098.htm)"
+      },
+      "images": [
+        "/media/vn-jp-2026-stage.jpg",
+        "/media/vn-jp-2026-jst.jpg",
+        "/media/vn-jp-2026-speech.jpg",
+        "/media/vn-jp-2026-forum.jpg"
+      ]
+    }
+  ],
   "research": [
     {
       "date": "now",
@@ -125,6 +148,7 @@
     }
   ],
   "show": {
+    "highlights": true,
     "timeline": true,
     "about": true,
     "research": true,

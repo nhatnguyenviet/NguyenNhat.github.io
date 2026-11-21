@@ -162,6 +162,29 @@ content:
             type: string
           - name: text
             component: bi_line
+      - name: highlights
+        label: Sự kiện nổi bật / Highlights (mới nhất ở trên)
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Ngày (vd 2026.11.09)
+            type: string
+          - name: place
+            component: bi_line
+            label: Địa điểm
+          - name: title
+            component: bi_line
+            label: Tên sự kiện
+          - name: text
+            component: bi_text
+            label: Nội dung (markdown, có thể chèn link)
+          - name: images
+            label: Ảnh (ảnh đầu tiên hiện lớn)
+            type: image
+            options:
+              multiple:
+                max: 30
       - name: research
         label: Nghiên cứu / Research
         type: object
@@ -208,6 +231,7 @@ content:
         type: object
         fields:
           - { name: timeline, type: boolean }
+          - { name: highlights, type: boolean }
           - { name: about, type: boolean }
           - { name: research, type: boolean }
           - { name: education, type: boolean }
