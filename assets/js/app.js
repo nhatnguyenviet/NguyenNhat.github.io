@@ -1,7 +1,7 @@
 /* =========================================================
    Nhat's garden — renders every page from the files in /content
    You normally never need to edit this file:
-   change text/photos/colors in content/site.json, content/photos.json
+   change text/colors in content/site.json, photo albums in content/albums/*.json
    and write posts in content/posts/*.md (or use Pages CMS).
    ========================================================= */
 
@@ -14,7 +14,8 @@ const UI = {
     full_cv: "Full resume", notes: "notes", other_lang: "Tiếng Việt",
     other_posts: "Bài viết tiếng Việt", writing_lead: "Stories, notes and theories I've learned — newest first.",
     back: "all writing", not_found: "Post not found.", no_posts: "No posts yet.",
-    choose: "change language"
+    choose: "change language",
+    photos_lead: "Photo albums — tap an album to open it.", n_photos: "photos", all_albums: "all albums", no_albums: "No albums yet."
   },
   vi: {
     home: "trang chủ", writing: "bài viết", photos: "ảnh",
@@ -23,7 +24,8 @@ const UI = {
     full_cv: "CV đầy đủ", notes: "ghi chép", other_lang: "English",
     other_posts: "Posts in English", writing_lead: "Câu chuyện, ghi chép và lý thuyết mình học được — mới nhất ở trên.",
     back: "tất cả bài viết", not_found: "Không tìm thấy bài viết.", no_posts: "Chưa có bài viết.",
-    choose: "đổi ngôn ngữ"
+    choose: "đổi ngôn ngữ",
+    photos_lead: "Các album ảnh — bấm vào album để xem.", n_photos: "ảnh", all_albums: "tất cả album", no_albums: "Chưa có album."
   }
 };
 
@@ -126,7 +128,7 @@ function renderChrome(site, active) {
   $("#nav").innerHTML = `
     <a href="${link("home.html")}" class="${active === "home" ? "active" : ""}">${U.home}</a>
     <a href="${link("writing.html")}" class="${active === "writing" ? "active" : ""}">${U.writing}</a>
-    ${site.show?.photos !== false ? `<a href="${link("home.html")}#photos">${U.photos}</a>` : ""}
+    ${site.show?.photos !== false ? `<a href="${link("photos.html")}" class="${active === "photos" ? "active" : ""}">${U.photos}</a>` : ""}
     <span class="spacer"></span>
     <a class="lang" href="?${otherParams}" title="${U.choose}">${U.other_lang}</a>`;
   $("#footer").innerHTML = `© ${new Date().getFullYear()} ${esc(site.name)} · <a href="index.html?choose">${U.choose}</a>`;
@@ -139,8 +141,6 @@ const datedList = items => `<ol class="dated">${(items || []).map(it =>
 async function pageHome(site) {
   document.title = tr(site.site_title);
   const show = site.show || {};
-  let photos = [];
-  if (show.photos !== false) { try { photos = await getJSON("content/photos.json"); } catch (e) {} }
   const s = [];
   s.push(`<header>
       ${site.banner ? `<img class="banner" src="${esc(src(site.banner))}" alt="">` : ""}
@@ -155,9 +155,6 @@ async function pageHome(site) {
   if (show.slices !== false && site.slices?.length) s.push(`<section id="slices"><h2>${U.slices}</h2>
       <div class="chips">${site.slices.map((x, i) => `<button class="chip" data-i="${i}">${esc(tr(x.label))}</button>`).join("")}</div>
       ${site.slices.map((x, i) => `<div class="slice" id="slice-${i}">${md(tr(x.text))}</div>`).join("")}</section>`);
-  if (show.photos !== false && photos.length) s.push(`<section id="photos"><h2>${U.photo_diary}</h2><div class="gallery">
-      ${photos.map(p => `<figure><img loading="lazy" src="${esc(src(p.image))}" alt="${esc(tr(p.caption))}">
-        <figcaption>${esc(tr(p.caption))}${p.date ? " · " + esc(p.date) : ""}</figcaption></figure>`).join("")}</div></section>`);
   if (show.contact !== false && site.contacts?.length) s.push(`<section id="contact"><h2>${U.contact}</h2><ul class="plain">
       ${site.contacts.map(c => `<li><a href="${esc(c.url)}">${esc(c.label)}</a></li>`).join("")}</ul></section>`);
   $("#main").innerHTML = s.join("");
@@ -168,11 +165,6 @@ async function pageHome(site) {
     document.querySelectorAll(".chip,.slice").forEach(e => e.classList.remove("on"));
     if (!on) { btn.classList.add("on"); $("#slice-" + btn.dataset.i).classList.add("on"); }
   }));
-  // lightbox
-  const lb = $(".lightbox");
-  document.querySelectorAll(".gallery img").forEach(img => img.addEventListener("click", () => { $("img", lb).src = img.src; lb.classList.add("on"); }));
-  lb.addEventListener("click", () => lb.classList.remove("on"));
-  document.addEventListener("keydown", e => e.key === "Escape" && lb.classList.remove("on"));
   if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
 }
 
@@ -207,6 +199,61 @@ async function pagePost(site) {
   $("#main").innerHTML = out + `<p class="back">← <a href="${link("writing.html")}">${U.back}</a></p>`;
 }
 
+// ---- Lightbox with previous / next (← → keys, swipe)
+function lightbox(imgs) {
+  const lb = $(".lightbox"), big = $("img", lb), cap = $(".lb-cap", lb);
+  let i = 0;
+  const show = k => { i = (k + imgs.length) % imgs.length; big.src = imgs[i].src; cap.textContent = imgs[i].dataset.cap || ""; lb.classList.add("on"); };
+  imgs.forEach((img, k) => img.addEventListener("click", () => show(k)));
+  $(".lb-prev", lb).onclick = e => { e.stopPropagation(); show(i - 1); };
+  $(".lb-next", lb).onclick = e => { e.stopPropagation(); show(i + 1); };
+  lb.onclick = () => lb.classList.remove("on");
+  document.addEventListener("keydown", e => {
+    if (!lb.classList.contains("on")) return;
+    if (e.key === "Escape") lb.classList.remove("on");
+    if (e.key === "ArrowLeft") show(i - 1);
+    if (e.key === "ArrowRight") show(i + 1);
+  });
+  let x0 = null;
+  lb.addEventListener("touchstart", e => x0 = e.touches[0].clientX, { passive: true });
+  lb.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
+}
+
+const range = (a, b) => !a ? "" : (a === b || !b ? a : `${a} – ${b}`);
+
+async function pagePhotos(site) {
+  const slug = (params.get("album") || "").replace(/[^A-Za-z0-9_.\-]/g, "");
+  if (!slug) {                                         // album grid
+    document.title = `${U.photos} · ${tr(site.site_title)}`;
+    let albums = [];
+    try { albums = await getJSON("content/albums/index.json"); } catch (e) {}
+    $("#main").innerHTML = `<h1>${U.photos}</h1><p class="lead">${U.photos_lead}</p>
+      ${albums.length ? `<div class="albums">${albums.map(a => `
+        <a class="album" href="${link("photos.html", "&album=" + encodeURIComponent(a.slug))}">
+          <img loading="lazy" src="${esc(src(a.cover))}" alt="">
+          <b>${esc(tr(a.title) || a.name)}</b>
+          <span>${a.count} ${U.n_photos}${a.from ? " · " + esc(range(a.from, a.to)) : ""}</span>
+        </a>`).join("")}</div>` : `<p class="muted">${U.no_albums}</p>`}`;
+    return;
+  }
+  let a = null;                                        // one album
+  try { a = await getJSON(`content/albums/${slug}.json`); } catch (e) {}
+  if (!a) { $("#main").innerHTML = `<p>${U.not_found}</p><p class="back">← <a href="${link("photos.html")}">${U.all_albums}</a></p>`; return; }
+  const title = tr(a.title) || a.name || slug;
+  document.title = `${title} · ${tr(site.site_title)}`;
+  const moments = (a.moments || []).slice().sort((x, y) => String(y.date || "").localeCompare(String(x.date || "")));
+  $("#main").innerHTML = `<p class="crumb"><a href="${link("photos.html")}">← ${U.all_albums}</a></p>
+    <h1>${esc(title)}</h1>${tr(a.description) ? `<div class="lead">${md(tr(a.description))}</div>` : ""}
+    ${moments.map(m => {
+      const imgs = [].concat(m.images || []).filter(Boolean), cap = tr(m.title);
+      return `<section class="moment"><h2><span class="date">${esc(m.date || "")}</span> ${esc(cap)}</h2>
+        ${tr(m.note) ? md(tr(m.note)) : ""}
+        <div class="gallery">${imgs.map(im => `<img loading="lazy" src="${esc(src(im))}" alt="${esc(cap)}" data-cap="${esc([m.date, cap].filter(Boolean).join(" · "))}">`).join("")}</div>
+      </section>`; }).join("")}
+    <p class="back">← <a href="${link("photos.html")}">${U.all_albums}</a></p>`;
+  lightbox([...document.querySelectorAll(".gallery img")]);
+}
+
 // ---- Boot
 (async () => {
   const page = document.body.dataset.page;
@@ -217,5 +264,6 @@ async function pagePost(site) {
   if (page === "home") await pageHome(site);
   if (page === "writing") await pageWriting(site);
   if (page === "post") await pagePost(site);
+  if (page === "photos") await pagePhotos(site);
   document.body.classList.add("ready");
 })();

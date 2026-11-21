@@ -75,23 +75,55 @@ content:
           format: markdown
           switcher: true
 
-  # ---------- NHẬT KÝ ẢNH ----------
-  - name: photos
-    label: Nhật ký ảnh / Photos
-    type: file
-    path: content/photos.json
+  # ---------- ALBUM ẢNH ----------
+  - name: albums
+    label: Album ảnh / Photo albums
+    type: collection
+    path: content/albums
     format: json
-    list: true
+    exclude: [index.json]
+    filename: "{primary}.json"
+    view:
+      primary: name
+      fields: [name, order]
+      sort: order
     fields:
-      - name: image
-        label: Ảnh / Photo
-        type: image
-      - name: date
-        label: Ngày (vd 2026.11)
+      - name: name
+        label: Tên album (vd Osaka) — cũng là tên file
         type: string
-      - name: caption
+        required: true
+      - name: title
         component: bi_line
-        label: Chú thích / Caption
+        label: Tên hiển thị (EN / VI)
+      - name: cover
+        label: Ảnh bìa (để trống = dùng ảnh đầu tiên)
+        type: image
+      - name: order
+        label: Thứ tự hiển thị (1 = đầu tiên)
+        type: number
+      - name: description
+        component: bi_text
+        label: Mô tả album
+      - name: moments
+        label: Các mốc thời gian / Moments
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Ngày (vd 2026.12 hoặc 2026.12.24)
+            type: string
+          - name: title
+            component: bi_line
+            label: Tiêu đề mốc (EN / VI)
+          - name: note
+            component: bi_text
+            label: Ghi chú (không bắt buộc)
+          - name: images
+            label: Ảnh (chọn được nhiều ảnh cùng lúc)
+            type: image
+            options:
+              multiple:
+                max: 100
 
   # ---------- THÔNG TIN & GIAO DIỆN ----------
   - name: site
@@ -172,7 +204,7 @@ content:
           - name: url
             type: string
       - name: show
-        label: Hiện/ẩn các mục
+        label: Hiện/ẩn các mục (photos = nút "ảnh" trên menu)
         type: object
         fields:
           - { name: timeline, type: boolean }

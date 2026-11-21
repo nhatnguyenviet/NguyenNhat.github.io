@@ -8,10 +8,11 @@ Trang web tĩnh, host miễn phí trên GitHub Pages. **Toàn bộ nội dung n�
 index.html              Trang chọn ngôn ngữ (English / Tiếng Việt). Lần sau khách vào sẽ tự nhớ lựa chọn.
 home.html               Trang chủ
 writing.html            Danh sách bài viết
+photos.html             Trang ảnh: danh sách album → bấm vào để xem từng album
 post.html               Trang hiển thị một bài viết
 
 content/site.json       ← THÔNG TIN, CHỮ HAI THỨ TIẾNG, BẬT/TẮT MỤC, MÀU SẮC, PHÔNG CHỮ
-content/photos.json     ← NHẬT KÝ ẢNH
+content/albums/*.json   ← ALBUM ẢNH (mỗi album một file: tokyo.json, osaka.json…)
 content/posts/*.md      ← BÀI VIẾT (mỗi bài một file)
 media/                  ← ẢNH VÀ FILE (CV…)
 
@@ -37,7 +38,7 @@ assets/                 Giao diện và code (thường không cần sửa)
 2. Cài GitHub App của Pages CMS cho tài khoản của bạn, rồi chọn repo `<username>.github.io`.
 3. Bạn sẽ thấy 3 mục ở thanh bên trái:
    - **Bài viết / Posts**: bấm *Add an entry* để viết bài mới. Chọn ngôn ngữ (vi/en), ngày, tiêu đề rồi viết nội dung. Có thể chèn ảnh ngay trong bài. Tick **Draft** nếu muốn giấu bài viết khỏi trang.
-   - **Nhật ký ảnh / Photos**: bấm *Add* rồi tải ảnh lên, viết chú thích cho cả hai thứ tiếng.
+   - **Album ảnh / Photo albums**: mỗi album là một nơi (Tokyo, Osaka…). Trong album có danh sách **mốc thời gian**, mỗi mốc gồm ngày, tiêu đề và nhiều ảnh (chọn được nhiều ảnh cùng lúc). Muốn thêm ảnh Osaka mới: mở album Osaka, bấm thêm một mốc thời gian, tải ảnh lên rồi Save. Muốn tạo album mới (vd Kyoto): bấm *Add an entry*.
    - **Trang chủ & giao diện**: sửa giới thiệu, timeline, nghiên cứu, học vấn, liên hệ. Trong đây cũng có phần **Hiện/ẩn các mục** và **Giao diện**: màu nền, màu chữ, màu nhấn, phông chữ, cỡ chữ.
 4. Bấm **Save**. Pages CMS lưu thẳng lên GitHub, và trang web tự cập nhật sau khoảng 1–2 phút.
 

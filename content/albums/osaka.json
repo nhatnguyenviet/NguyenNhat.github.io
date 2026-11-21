@@ -1,0 +1,36 @@
+{
+  "name": "Osaka",
+  "title": {
+    "en": "Osaka",
+    "vi": "Osaka"
+  },
+  "order": 2,
+  "cover": "/media/osaka-1.svg",
+  "description": {
+    "en": "[A few words about Osaka]",
+    "vi": "[Vài dòng về Osaka]"
+  },
+  "moments": [
+    {
+      "date": "2027.01",
+      "title": {
+        "en": "[Second trip]",
+        "vi": "[Chuyến thứ hai]"
+      },
+      "images": [
+        "/media/osaka-3.svg"
+      ]
+    },
+    {
+      "date": "2026.12",
+      "title": {
+        "en": "[First trip]",
+        "vi": "[Chuyến đầu tiên]"
+      },
+      "images": [
+        "/media/osaka-1.svg",
+        "/media/osaka-2.svg"
+      ]
+    }
+  ]
+}
