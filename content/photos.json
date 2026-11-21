@@ -1,6 +1,32 @@
 [
-  { "image": "/media/photo-1.svg", "date": "2026.11", "caption": { "en": "first walk in Tokyo", "vi": "lần đầu dạo Tokyo" } },
-  { "image": "/media/photo-2.svg", "date": "2026.11", "caption": { "en": "Hongo campus", "vi": "khuôn viên Hongo" } },
-  { "image": "/media/photo-3.svg", "date": "", "caption": { "en": "home, Hanoi", "vi": "nhà, Hà Nội" } },
-  { "image": "/media/photo-4.svg", "date": "", "caption": { "en": "with friends", "vi": "cùng bạn bè" } }
+  {
+    "image": "/media/1793509025211_272168521145617572_3135731424112404198_f24a3c7d164dea91c9bf94cfc4e58fcd.jpg",
+    "date": "2026.10",
+    "caption": {
+      "en": "first walk in Tokyo",
+      "vi": "lần đầu dạo Tokyo"
+    }
+  },
+  {
+    "image": "/media/photo-2.svg",
+    "date": "2026.11",
+    "caption": {
+      "en": "Hongo campus",
+      "vi": "khuôn viên Hongo"
+    }
+  },
+  {
+    "image": "/media/photo-3.svg",
+    "caption": {
+      "en": "home, Hanoi",
+      "vi": "nhà, Hà Nội"
+    }
+  },
+  {
+    "image": "/media/photo-4.svg",
+    "caption": {
+      "en": "with friends",
+      "vi": "cùng bạn bè"
+    }
+  }
 ]
