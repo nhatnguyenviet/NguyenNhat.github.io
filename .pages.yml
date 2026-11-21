@@ -248,6 +248,10 @@ content:
             type: string
           - name: url
             type: string
+      - name: order
+        label: "Thứ tự các mục trên trang chủ (kéo để sắp xếp). Tên mục: about, timeline, highlights, research, publications, education, slices, contact"
+        type: string
+        list: true
       - name: show
         label: Hiện/ẩn các mục (photos = nút "ảnh" trên menu)
         type: object

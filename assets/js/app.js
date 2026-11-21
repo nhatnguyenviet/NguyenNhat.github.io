@@ -139,6 +139,8 @@ const datedList = items => `<ol class="dated">${(items || []).map(it =>
   `<li><span class="date">${esc(it.date)}</span><span>${md(tr(it.text), true)}</span></li>`).join("")}</ol>`;
 
 // ---- Pages
+const DEFAULT_ORDER = ["about", "timeline", "highlights", "research", "publications", "education", "slices", "contact"];
+
 async function pageHome(site) {
   document.title = tr(site.site_title);
   const show = site.show || {};
@@ -147,7 +149,7 @@ async function pageHome(site) {
       ${site.banner ? `<img class="banner" src="${esc(src(site.banner))}" alt="">` : ""}
       <h1>${esc(tr(site.site_title))}</h1>
       <div class="lead">${md(tr(site.tagline))}</div></header>`);
-  if (show.timeline !== false && site.timeline?.length) s.push(`<section><h2>${U.recently}</h2>${datedList(site.timeline)}</section>`);
+  if (show.timeline !== false && site.timeline?.length) s.push(`<section id="timeline"><h2>${U.recently}</h2>${datedList(site.timeline)}</section>`);
   if (show.highlights !== false && site.highlights?.length) s.push(`<section id="highlights"><h2>${U.highlights}</h2>
       ${site.highlights.map(h => {
         const imgs = [].concat(h.images || []).filter(Boolean), title = tr(h.title);
@@ -182,6 +184,12 @@ async function pageHome(site) {
   if (show.contact !== false && site.contacts?.length) s.push(`<section id="contact"><h2>${U.contact}</h2><ul class="plain">
       ${site.contacts.map(c => `<li><a href="${esc(c.url)}">${esc(c.label)}</a></li>`).join("")}</ul></section>`);
   $("#main").innerHTML = s.join("");
+
+  // section order (site.json "order"); sections not listed keep their place at the end
+  const main = $("#main"), all = [...main.querySelectorAll(":scope > section")];
+  const order = (site.order && site.order.length) ? site.order : DEFAULT_ORDER;
+  order.forEach(id => { const el = main.querySelector(`:scope > section#${String(id).trim()}`); if (el) main.appendChild(el); });
+  all.filter(el => !order.includes(el.id)).forEach(el => main.appendChild(el));
 
   // toggles
   document.querySelectorAll(".chip").forEach(btn => btn.addEventListener("click", () => {
