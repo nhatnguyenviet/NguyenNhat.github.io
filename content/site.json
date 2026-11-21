@@ -13,10 +13,10 @@
     "en": "Hi, I'm Nguyen Viet Nhat\n\nA curious mind with an interest in science, materials, and semiconductor research. Currently pursuing a Ph.D. at the University of Tokyo, trying to understand how things work, one question at a time.\n\nOutside academia, I enjoy photography, exploring new places, and collecting little moments along the way.",
     "vi": "Xin chào, mình là Nguyễn Việt Nhật.\n\nMình yêu thích khoa học, sự tò mò, và việc khám phá những điều mình chưa biết. Hiện tại, mình đang theo đuổi con đường nghiên cứu trong lĩnh vực khoa học vật liệu và bán dẫn, đồng thời bắt đầu hành trình học tập và nghiên cứu tiến sĩ tại Đại học Tokyo.\n\nNgoài phòng thí nghiệm, mình thích khám phá những nơi mới, chụp ảnh và lưu giữ những khoảnh khắc nhỏ trong cuộc sống. Có lẽ website này cũng là một cách để mình ghi lại hành trình ấy — cả những gì mình học được lẫn những gì mình tình cờ bắt gặp trên đường đi."
   },
-  "about_photo": "/media/lab.svg",
+  "about_photo": "/media/1793509025211_272168521145617572_3135731424112404198_f24a3c7d164dea91c9bf94cfc4e58fcd-1.jpg",
   "about_caption": {
-    "en": "somewhere in the lab",
-    "vi": "đâu đó trong phòng lab"
+    "en": "..",
+    "vi": "Bức ảnh đầu tiên tại Đại học Tokyo (Todai)"
   },
   "timeline": [
     {
@@ -45,35 +45,49 @@
     {
       "date": "now",
       "text": {
-        "en": "[Current project at UTokyo]",
-        "vi": "[Đề tài hiện tại ở UTokyo]"
+        "en": "Electronics based on perovskite oxides at Utokyo",
+        "vi": "..."
       }
     },
     {
-      "date": "20xx–20xx",
+      "date": "2023–2025",
       "text": {
         "en": "Nanomaterial gas sensors — M.Sc. research, HUST.",
-        "vi": "Cảm biến khí vật liệu nano — nghiên cứu thạc sĩ, ĐH Bách khoa Hà Nội."
+        "vi": "Cảm biến khí vật liệu nano —  Thạc sĩ, ĐH Bách khoa Hà Nội."
       }
     }
   ],
   "education": [
     {
-      "date": "2026–",
+      "date": "2026/10-Now",
       "text": {
-        "en": "**The University of Tokyo** — [program / lab]",
-        "vi": "**Đại học Tokyo** — [chương trình / phòng lab]"
+        "en": "**The University of Tokyo** — Anh Lab —TOPOLOGICAL QUANTUM ELECTRONICS LABORATORY",
+        "vi": "**Đại học Tokyo** — Anh Lab"
       }
     },
     {
-      "date": "20xx–20xx",
+      "date": "2023–2025",
       "text": {
         "en": "**Hanoi University of Science and Technology** — M.Sc. in Materials Science (Electronic Materials)",
         "vi": "**Đại học Bách khoa Hà Nội** — Thạc sĩ Khoa học Vật liệu (Vật liệu Điện tử)"
       }
+    },
+    {
+      "date": "2024/10-2025-9",
+      "text": {
+        "en": "**University of Osaka** — Nanoscience and  Nanotechnology as Manufacturing Core",
+        "vi": "**Đại học Osaka** — Khoa học và công nghệ nano"
+      }
+    },
+    {
+      "date": "2019-2023",
+      "text": {
+        "en": "**Hanoi University of Science and Technology** —  B.a in Engineering Physics ",
+        "vi": "**Đại học Bách khoa Hà Nội** — Vật Lý Kĩ Thuật"
+      }
     }
   ],
-  "cv": "/media/cv.pdf",
+  "cv": "/media/CV_N_V_Nhat.pdf",
   "slices": [
     {
       "label": {
@@ -81,39 +95,29 @@
         "vi": "khoa học"
       },
       "text": {
-        "en": "[A theory you love and why.]",
-        "vi": "[Một lý thuyết bạn thích và vì sao.]"
+        "en": "Will write this later.",
+        "vi": "Đang viết...."
       }
     },
     {
       "label": {
         "en": "life in japan",
-        "vi": "sống ở Nhật"
+        "vi": "Cuộc sống ở Nhật"
       },
       "text": {
-        "en": "[New things from life in Japan.]",
-        "vi": "[Những điều mới lạ ở Nhật.]"
-      }
-    },
-    {
-      "label": {
-        "en": "books",
-        "vi": "sách"
-      },
-      "text": {
-        "en": "[Books you're reading.]",
-        "vi": "[Sách bạn đang đọc.]"
+        "en": "Updating...",
+        "vi": "Đang cập nhập..."
       }
     }
   ],
   "contacts": [
     {
       "label": "email",
-      "url": "mailto:you@example.com"
+      "url": "Nhat20196429@gmail.com"
     },
     {
-      "label": "github",
-      "url": "https://github.com/USERNAME"
+      "label": "facebook",
+      "url": "https://www.facebook.com/nhat.nguyenviet.735"
     },
     {
       "label": "linkedin",
