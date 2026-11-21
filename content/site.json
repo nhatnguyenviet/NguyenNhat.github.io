@@ -84,13 +84,6 @@
   "publications": [
     {
       "year": "2026",
-      "title": "Synthesis of SnS₂ Nanosheets for Gas Sensors: Effect of Hydrothermal Temperatures",
-      "authors": "To Thi Nguyet, Nguyen Pham Yen Nhi, Dang Thi Thu Ha, Pham Van Tong, Nguyen Viet Nhat, Pham Xuan Hien, Tran Nguyen Anh Quan, Chu Manh Hung, Nguyen Van Duy, Mingzhi Jiao, Chu Thi Xuan, Nguyen Duc Hoa",
-      "venue": "Journal of Electronic Materials 55(10), 8487–8498",
-      "link": "https://doi.org/10.1007/s11664-026-12979-8"
-    },
-    {
-      "year": "2026",
       "title": "Highly sensitive and dual-selective gas sensing using WS₂ nanosheets for NO₂ and NH₃ detection at low temperature",
       "authors": "Ho Huu Hau, Nguyen Viet Nhat, Luong Thi Theu, Phung Thi Viet Bac, Dinh Van An, Pham Van Thang, Hoang Si Hong, Nguyen Xuan Thai, Nguyen Duc Chien, Nguyen Van Duy, Nguyen Duc Hoa, Chu Manh Hung",
       "venue": "Sensors and Actuators A: Physical, 117464",
@@ -98,10 +91,17 @@
     },
     {
       "year": "2026",
-      "title": "Instant synthesis of porous SnO₂ nanosheets for ultrahigh sensitive NO₂ gas sensors",
-      "authors": "Nguyen Viet Nhat, Nguyen Thi Hong Van, Nguyen Cao Nam, Nguyen Van Duy, Chu Thi Xuan, Chu Manh Hung, Trinh Minh Ngoc, Nguyen Duc Hoa",
-      "venue": "Advances in Natural Sciences: Nanoscience and Nanotechnology 17(2)",
-      "link": ""
+      "title": "Ultrasensitive gas sensor based on 3D assembled SnS₂/SnO₂ nanoflowers for NO₂ detection at room temperature",
+      "authors": "To Thi Nguyet, Nguyen Pham Yen Nhi, Pham Van Tong, Nguyen Viet Nhat, Chu Thi Xuan, Tran Thi Viet Nga, Nguyen Van Duy, Chu Manh Hung, Mingzhi Jiao, Nguyen Duc Hoa",
+      "venue": "Talanta 313, 130679",
+      "link": "https://doi.org/10.1016/j.talanta.2026.130679"
+    },
+    {
+      "year": "2026",
+      "title": "Synthesis of SnS₂ Nanosheets for Gas Sensors: Effect of Hydrothermal Temperatures",
+      "authors": "To Thi Nguyet, Nguyen Pham Yen Nhi, Dang Thi Thu Ha, Pham Van Tong, Nguyen Viet Nhat, Pham Xuan Hien, Tran Nguyen Anh Quan, Chu Manh Hung, Nguyen Van Duy, Mingzhi Jiao, Chu Thi Xuan, Nguyen Duc Hoa",
+      "venue": "Journal of Electronic Materials 55(10), 8487–8498",
+      "link": "https://doi.org/10.1007/s11664-026-12979-8"
     },
     {
       "year": "2026",
@@ -109,6 +109,20 @@
       "authors": "Nguyen Viet Nhat, Nguyen Thi Hong Van, Nguyen Duc Chien, Nguyen Van Duy, Nguyen Duc Hoa, Chu Manh Hung",
       "venue": "Communications in Physics 36(2)",
       "link": "https://vjs.ac.vn/cip/article/view/23767"
+    },
+    {
+      "year": "2026",
+      "title": "Instant synthesis of porous SnO₂ nanosheets for ultrahigh sensitive NO₂ gas sensors",
+      "authors": "Nguyen Viet Nhat, Nguyen Thi Hong Van, Nguyen Cao Nam, Nguyen Van Duy, Chu Thi Xuan, Chu Manh Hung, Trinh Minh Ngoc, Nguyen Duc Hoa",
+      "venue": "Advances in Natural Sciences: Nanoscience and Nanotechnology 17(2), 025003",
+      "link": ""
+    },
+    {
+      "year": "preprint",
+      "title": "Porous Zn₂SnO₄/MoS₂ p–n Heterostructures Enable Highly Sensitive and Selective Triethylamine-Sensing Properties at Low Operating Temperature",
+      "authors": "Ho Huu Hau, Chu Manh Hung, Nguyen Viet Nhat, Chu Thi Xuan, Nguyen Van Duy, Mingzhi Jiao, W. J. Yu, et al.",
+      "venue": "Available at SSRN 7438178",
+      "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7438178"
     }
   ],
   "education": [
