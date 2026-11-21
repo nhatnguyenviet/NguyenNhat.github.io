@@ -1,0 +1,205 @@
+# Cấu hình cho Pages CMS (https://app.pagescms.org) — giao diện web để sửa nội dung,
+# tải ảnh và viết bài mà không cần đụng vào code.
+
+media:
+  input: media
+  output: /media
+
+components:
+  bi_line:
+    type: object
+    label: Text (EN / VI)
+    fields:
+      - name: en
+        label: English
+        type: string
+      - name: vi
+        label: Tiếng Việt
+        type: string
+  bi_text:
+    type: object
+    label: Text (EN / VI)
+    fields:
+      - name: en
+        label: English (markdown)
+        type: text
+      - name: vi
+        label: Tiếng Việt (markdown)
+        type: text
+
+content:
+  # ---------- BÀI VIẾT ----------
+  - name: posts
+    label: Bài viết / Posts
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    exclude: [index.json]
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      fields: [title, date, lang]
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Tiêu đề / Title
+        type: string
+        required: true
+      - name: date
+        label: Ngày / Date
+        type: date
+        required: true
+      - name: lang
+        label: Ngôn ngữ / Language
+        type: select
+        options:
+          values: [vi, en]
+      - name: summary
+        label: Tóm tắt ngắn / Summary
+        type: string
+      - name: tags
+        label: Thẻ / Tags
+        type: string
+        list: true
+      - name: cover
+        label: Ảnh bìa / Cover image
+        type: image
+      - name: draft
+        label: Bản nháp (ẩn khỏi web) / Draft
+        type: boolean
+      - name: body
+        label: Nội dung / Content
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+
+  # ---------- NHẬT KÝ ẢNH ----------
+  - name: photos
+    label: Nhật ký ảnh / Photos
+    type: file
+    path: content/photos.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Ảnh / Photo
+        type: image
+      - name: date
+        label: Ngày (vd 2026.11)
+        type: string
+      - name: caption
+        component: bi_line
+        label: Chú thích / Caption
+
+  # ---------- THÔNG TIN & GIAO DIỆN ----------
+  - name: site
+    label: Trang chủ & giao diện / Site settings
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        label: Họ tên
+        type: string
+      - name: site_title
+        component: bi_line
+        label: Tên trang web
+      - name: tagline
+        component: bi_line
+        label: Câu chào
+      - name: banner
+        label: Ảnh banner
+        type: image
+      - name: about
+        component: bi_text
+        label: Về mình / About me
+      - name: about_photo
+        label: Ảnh ở mục About
+        type: image
+      - name: about_caption
+        component: bi_line
+        label: Chú thích ảnh About
+      - name: timeline
+        label: Gần đây / Timeline (mới nhất ở trên)
+        type: object
+        list: true
+        fields:
+          - name: date
+            type: string
+          - name: text
+            component: bi_line
+      - name: research
+        label: Nghiên cứu / Research
+        type: object
+        list: true
+        fields:
+          - name: date
+            type: string
+          - name: text
+            component: bi_line
+      - name: education
+        label: Học vấn / Education
+        type: object
+        list: true
+        fields:
+          - name: date
+            type: string
+          - name: text
+            component: bi_line
+      - name: cv
+        label: File CV (pdf)
+        type: file
+      - name: slices
+        label: Lát cắt cuộc sống / Slices
+        type: object
+        list: true
+        fields:
+          - name: label
+            component: bi_line
+            label: Tên nút
+          - name: text
+            component: bi_text
+            label: Nội dung
+      - name: contacts
+        label: Liên hệ / Contacts
+        type: object
+        list: true
+        fields:
+          - name: label
+            type: string
+          - name: url
+            type: string
+      - name: show
+        label: Hiện/ẩn các mục
+        type: object
+        fields:
+          - { name: timeline, type: boolean }
+          - { name: about, type: boolean }
+          - { name: research, type: boolean }
+          - { name: education, type: boolean }
+          - { name: slices, type: boolean }
+          - { name: photos, type: boolean }
+          - { name: contact, type: boolean }
+      - name: theme
+        label: Giao diện / Theme
+        type: object
+        fields:
+          - name: background
+            label: Màu nền (mã hex, vd #f4f4ef)
+            type: string
+          - name: text
+            label: Màu chữ
+            type: string
+          - name: accent
+            label: Màu nhấn
+            type: string
+          - name: font
+            label: Phông chữ
+            type: select
+            options:
+              values: [Newsreader, Lora, Noto Serif, Be Vietnam Pro, Inter]
+          - name: font_size
+            label: Cỡ chữ (px)
+            type: number

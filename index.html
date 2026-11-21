@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nhat's garden</title>
+  <meta name="description" content="Nguyen Viet Nhat — personal website / trang cá nhân">
+  <meta name="theme-color" content="#f4f4ef">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Khách quay lại: đi thẳng vào ngôn ngữ đã chọn lần trước (trừ khi bấm "đổi ngôn ngữ": index.html?choose)
+    try {
+      var saved = localStorage.getItem("lang");
+      if (saved && location.search.indexOf("choose") === -1) location.replace("home.html?lang=" + saved);
+    } catch (e) {}
+  </script>
+</head>
+<body class="splash-body">
+  <main class="splash">
+    <img class="splash-img" id="banner" src="media/banner.svg" alt="">
+    <h1 id="title">Nhat's garden</h1>
+    <p class="lead">Choose a language · Chọn ngôn ngữ</p>
+    <div class="splash-buttons">
+      <a class="lang-btn" href="home.html?lang=en"><b>English</b><span>Welcome</span></a>
+      <a class="lang-btn" href="home.html?lang=vi"><b>Tiếng Việt</b><span>Xin chào</span></a>
+    </div>
+  </main>
+  <script>
+    // dùng tên trang + ảnh banner từ content/site.json
+    fetch("content/site.json").then(r => r.json()).then(s => {
+      if (s.banner) document.getElementById("banner").src = s.banner.replace(/^\/+/, "");
+      if (s.name) document.getElementById("title").textContent = s.name;
+      if (s.theme && s.theme.background) document.documentElement.style.setProperty("--bg", s.theme.background);
+    }).catch(() => {});
+  </script>
+</body>
+</html>

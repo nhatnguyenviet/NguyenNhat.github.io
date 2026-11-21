@@ -1,0 +1,119 @@
+/* ===== Nhat's garden — minimal personal site ===== */
+:root {
+  --bg: #f4f4ef;
+  --text: #2b2b28;
+  --muted: #77756d;
+  --line: #dddcd3;
+  --accent: #3f6b4f;
+  --maxw: 680px;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --size: 19px;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: var(--size);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; transition: text-decoration-color .2s, color .2s; }
+a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+/* --- nav --- */
+nav.top { display: flex; align-items: center; gap: 22px; min-height: 28px; padding: 28px 0 20px; font-size: 16px; }
+nav.top a { text-decoration: none; color: var(--muted); }
+nav.top a.active, nav.top a:hover { color: var(--text); }
+
+/* --- hero --- */
+.banner { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; border-radius: 6px; display: block; }
+h1 { line-height: 1.25; font-weight: 500; font-size: 2.1rem; margin: 28px 0 4px; letter-spacing: -0.01em; }
+.lead { color: var(--muted); margin: 0 0 8px; font-style: italic; }
+
+/* --- sections --- */
+section { margin: 56px 0; }
+h2 { font-weight: 500; font-size: 1.15rem; margin: 0 0 16px; color: var(--muted); text-transform: lowercase; }
+h2::before { content: "~ "; color: var(--accent); }
+p { margin: 0 0 14px; }
+
+/* numbered / dated lists */
+ol.dated { list-style: none; padding: 0; margin: 0; }
+ol.dated li { display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+ol.dated li:last-child { border-bottom: none; }
+ol.dated .date { font-family: var(--mono); font-size: 14px; color: var(--muted); padding-top: 4px; }
+
+/* figures */
+figure { margin: 22px 0; }
+figure img { width: 100%; border-radius: 6px; display: block; }
+figcaption { font-style: italic; color: var(--muted); font-size: 15px; margin-top: 6px; text-align: center; }
+
+/* slices (toggles) */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chip { font: inherit; font-size: 15px; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; cursor: pointer; color: var(--muted); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.on { background: var(--text); border-color: var(--text); color: var(--bg); }
+.slice { display: none; animation: fade .3s ease; }
+.slice.on { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* photo diary */
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.gallery figure { margin: 0; }
+.gallery img { aspect-ratio: 4 / 3; object-fit: cover; cursor: zoom-in; }
+@media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } }
+
+/* lightbox */
+.lightbox { position: fixed; inset: 0; background: rgba(20,20,18,.88); display: none; align-items: center; justify-content: center; padding: 24px; z-index: 50; cursor: zoom-out; }
+.lightbox.on { display: flex; }
+.lightbox img { max-width: 100%; max-height: 88vh; border-radius: 4px; }
+
+/* contact */
+ul.plain { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+footer { color: var(--muted); font-size: 14px; padding: 40px 0 60px; border-top: 1px solid var(--line); margin-top: 70px; }
+
+/* ===== article (notes) ===== */
+article h1 { margin-top: 10px; }
+.meta { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-bottom: 30px; }
+article h2 { color: var(--text); text-transform: none; font-size: 1.35rem; margin-top: 40px; }
+article h2::before { content: ""; }
+article blockquote { margin: 20px 0; padding-left: 16px; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
+code { font-family: var(--mono); font-size: .85em; background: #e9e8e0; padding: 1px 5px; border-radius: 3px; }
+pre { background: #2b2b28; color: #f4f4ef; padding: 16px; border-radius: 6px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+pre code { background: none; padding: 0; color: inherit; }
+.katex-display { overflow-x: auto; overflow-y: hidden; }
+
+/* ===== bilingual additions ===== */
+nav.top .spacer { flex: 1; }
+nav.top a.lang { font-size: 14px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; }
+nav.top a.lang:hover { border-color: var(--accent); color: var(--accent); }
+main { min-height: 60vh; opacity: 0; transition: opacity .25s; }
+body.ready main { opacity: 1; }
+footer a { color: var(--muted); }
+.after { margin-top: 14px; }
+.summary, .muted { color: var(--muted); font-size: .85em; }
+.back { margin-top: 50px; }
+main section:first-of-type { margin-top: 40px; }
+article img { max-width: 100%; border-radius: 6px; }
+article .banner { margin-bottom: 26px; }
+
+/* language picker */
+.splash-body { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.splash-body main { opacity: 1; }
+.splash { text-align: center; padding: 40px 22px; max-width: 560px; width: 100%; }
+.splash-img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; border-radius: 6px; margin-bottom: 8px; }
+.splash h1 { margin-top: 22px; }
+.splash-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.lang-btn { display: flex; flex-direction: column; gap: 2px; padding: 18px 10px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; transition: all .2s; }
+.lang-btn b { font-weight: 500; font-size: 1.2rem; }
+.lang-btn span { color: var(--muted); font-style: italic; font-size: 15px; }
+.lang-btn:hover { border-color: var(--accent); background: #fff6; transform: translateY(-2px); }
+@media (max-width: 420px) { .splash-buttons { grid-template-columns: 1fr; } }

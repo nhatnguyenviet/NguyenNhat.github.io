@@ -1,0 +1,55 @@
+{
+  "name": "Nguyen Viet Nhat",
+  "site_title": { "en": "Nhat's garden", "vi": "Khu vườn của Nhật" },
+  "tagline": {
+    "en": "Welcome — a small corner for photos, stories and things I'm learning.",
+    "vi": "Chào bạn — một góc nhỏ cho những bức ảnh, câu chuyện và điều mình đang học."
+  },
+  "banner": "/media/banner.svg",
+  "about": {
+    "en": "Hi, I'm **Nguyen Viet Nhat**. I work on **nanomaterial-based gas sensors** — tiny structures whose electrical properties change when they meet a gas molecule.\n\n[Write 2–3 more sentences about yourself.]",
+    "vi": "Xin chào, mình là **Nguyễn Việt Nhật**. Mình nghiên cứu **cảm biến khí trên nền vật liệu nano** — những cấu trúc tí hon thay đổi tính chất điện khi gặp phân tử khí.\n\n[Viết thêm 2–3 câu về bản thân.]"
+  },
+  "about_photo": "/media/lab.svg",
+  "about_caption": { "en": "somewhere in the lab", "vi": "đâu đó trong phòng lab" },
+  "timeline": [
+    { "date": "2026.11", "text": { "en": "Started a new chapter at **The University of Tokyo**.", "vi": "Bắt đầu chặng mới tại **Đại học Tokyo**." } },
+    { "date": "2026.11", "text": { "en": "Launched this website. Say hi!", "vi": "Ra mắt trang web này. Ghé chơi nhé!" } },
+    { "date": "20xx.xx", "text": { "en": "Defended my M.Sc. thesis at HUST.", "vi": "Bảo vệ luận văn thạc sĩ tại ĐH Bách khoa Hà Nội." } }
+  ],
+  "research": [
+    { "date": "now", "text": { "en": "[Current project at UTokyo]", "vi": "[Đề tài hiện tại ở UTokyo]" } },
+    { "date": "20xx–20xx", "text": { "en": "Nanomaterial gas sensors — M.Sc. research, HUST.", "vi": "Cảm biến khí vật liệu nano — nghiên cứu thạc sĩ, ĐH Bách khoa Hà Nội." } }
+  ],
+  "education": [
+    { "date": "2026–", "text": { "en": "**The University of Tokyo** — [program / lab]", "vi": "**Đại học Tokyo** — [chương trình / phòng lab]" } },
+    { "date": "20xx–20xx", "text": { "en": "**Hanoi University of Science and Technology** — M.Sc. in Materials Science (Electronic Materials)", "vi": "**Đại học Bách khoa Hà Nội** — Thạc sĩ Khoa học Vật liệu (Vật liệu Điện tử)" } }
+  ],
+  "cv": "/media/cv.pdf",
+  "slices": [
+    { "label": { "en": "science", "vi": "khoa học" }, "text": { "en": "[A theory you love and why.]", "vi": "[Một lý thuyết bạn thích và vì sao.]" } },
+    { "label": { "en": "life in japan", "vi": "sống ở Nhật" }, "text": { "en": "[New things from life in Japan.]", "vi": "[Những điều mới lạ ở Nhật.]" } },
+    { "label": { "en": "books", "vi": "sách" }, "text": { "en": "[Books you're reading.]", "vi": "[Sách bạn đang đọc.]" } }
+  ],
+  "contacts": [
+    { "label": "email", "url": "mailto:you@example.com" },
+    { "label": "github", "url": "https://github.com/USERNAME" },
+    { "label": "linkedin", "url": "https://www.linkedin.com/in/USERNAME" }
+  ],
+  "show": {
+    "timeline": true,
+    "about": true,
+    "research": true,
+    "education": true,
+    "slices": true,
+    "photos": true,
+    "contact": true
+  },
+  "theme": {
+    "background": "#f4f4ef",
+    "text": "#2b2b28",
+    "accent": "#3f6b4f",
+    "font": "Newsreader",
+    "font_size": 19
+  }
+}
