@@ -5,13 +5,13 @@
     "vi": "Cuộc sống của Nhật"
   },
   "tagline": {
-    "en": "Welcome — a small corner for photos, stories and things I'm learning.",
-    "vi": "Chào bạn — một góc nhỏ cho những bức ảnh, câu chuyện và điều mình đang học."
+    "en": "Well, first of all, you made it here. I suppose that deserves some credit.  This is a little corner of the internet where I keep the photos I've taken, the moments I've stumbled upon, and the thoughts that occasionally cross my mind. Most of these things have never made it anywhere beyond my camera roll, and probably wouldn't have, if I hadn't decided to put them here.  Nothing particularly special. Just bits and pieces of life, collected along the way.  Feel free to wander around. Hope you find something you like.",
+    "vi": "Trước hết, xin dành một lời khen cho sự tò mò của bạn khi nhấn vào cái link không rõ nguồn gốc này trong bio của tôi.  Đây là nỗ lực của tôi trong việc đem đống ảnh khổng lồ chưa từng có dịp khoe với ai, ngoài vài người thân thiết, lên mạng. Thỉnh thoảng sẽ có thêm vài dòng suy nghĩ linh tinh.  Không có gì quá đặc biệt, chỉ là những thứ tôi muốn lưu lại đâu đó thay vì để chúng mãi nằm trong máy.  Hi vòng bạn thấy thú vị!"
   },
   "banner": "/media/baner.jpg",
   "about": {
-    "en": "Hi, I'm Nguyen Viet Nhat. I work on nanomaterial-based gas sensors — tiny structures whose electrical properties change when they meet a gas molecule.\n\n[Write 2–3 more sentences about yourself.]",
-    "vi": "Xin chào, mình là **Nguyễn Việt Nhật**. Mình nghiên cứu **cảm biến khí trên nền vật liệu nano** — những cấu trúc tí hon thay đổi tính chất điện khi gặp phân tử khí.\n\n[Viết thêm 2–3 câu về bản thân.]"
+    "en": "Hi, I'm Nguyen Viet Nhat\n\nA curious mind with an interest in science, materials, and semiconductor research. Currently pursuing a Ph.D. at the University of Tokyo, trying to understand how things work, one question at a time.\n\nOutside academia, I enjoy photography, exploring new places, and collecting little moments along the way.",
+    "vi": "Xin chào, mình là Nguyễn Việt Nhật.\n\nMình yêu thích khoa học, sự tò mò, và việc khám phá những điều mình chưa biết. Hiện tại, mình đang theo đuổi con đường nghiên cứu trong lĩnh vực khoa học vật liệu và bán dẫn, đồng thời bắt đầu hành trình học tập và nghiên cứu tiến sĩ tại Đại học Tokyo.\n\nNgoài phòng thí nghiệm, mình thích khám phá những nơi mới, chụp ảnh, và lưu giữ những khoảnh khắc nhỏ trong cuộc sống. Có lẽ website này cũng là một cách để mình ghi lại hành trình ấy — cả những gì mình học được lẫn những gì mình tình cờ bắt gặp trên đường đi."
   },
   "about_photo": "/media/lab.svg",
   "about_caption": {
@@ -20,24 +20,24 @@
   },
   "timeline": [
     {
-      "date": "2026.11",
+      "date": "2026.10",
       "text": {
         "en": "Started a new chapter at **The University of Tokyo**.",
         "vi": "Bắt đầu chặng mới tại **Đại học Tokyo**."
       }
     },
     {
-      "date": "2026.11",
+      "date": "2026.8",
       "text": {
-        "en": "Launched this website. Say hi!",
-        "vi": "Ra mắt trang web này. Ghé chơi nhé!"
+        "en": ".",
+        "vi": "Kết thúc trạng đường tại Đại học Bách khoa Hà Nội HUST"
       }
     },
     {
-      "date": "20xx.xx",
+      "date": "2025.12",
       "text": {
-        "en": "Defended my M.Sc. thesis at HUST.",
-        "vi": "Bảo vệ luận văn thạc sĩ tại ĐH Bách khoa Hà Nội."
+        "en": ".",
+        "vi": "Bảo vệ luận văn thạc sĩ tại ĐH Bách khoa Hà Nội. Thật may mắn khi có điểm cao nhất lớp"
       }
     }
   ],
