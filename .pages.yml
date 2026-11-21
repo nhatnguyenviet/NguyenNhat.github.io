@@ -139,7 +139,7 @@ content:
         component: bi_line
         label: Tên trang web
       - name: tagline
-        component: bi_line
+        component: bi_text
         label: Câu chào
       - name: banner
         label: Ảnh banner

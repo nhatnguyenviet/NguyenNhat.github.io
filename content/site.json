@@ -5,39 +5,39 @@
     "vi": "Cuộc sống của Nhật"
   },
   "tagline": {
-    "en": "Well, first of all, you made it here. I suppose that deserves some credit.  This is a little corner of the internet where I keep the photos I've taken, the moments I've stumbled upon, and the thoughts that occasionally cross my mind. Most of these things have never made it anywhere beyond my camera roll, and probably wouldn't have, if I hadn't decided to put them here.  Nothing particularly special. Just bits and pieces of life, collected along the way.  Feel free to wander around. Hope you find something you like.",
-    "vi": "Trước hết, xin dành một lời khen cho sự tò mò của bạn khi nhấn vào cái link không rõ nguồn gốc này trong bio của tôi.  Đây là nỗ lực của tôi trong việc đem đống ảnh khổng lồ chưa từng có dịp khoe với ai, ngoài vài người thân thiết, lên mạng. Thỉnh thoảng sẽ có thêm vài dòng suy nghĩ linh tinh.  Không có gì quá đặc biệt, chỉ là những thứ tôi muốn lưu lại đâu đó thay vì để chúng mãi nằm trong máy.  Hi vòng bạn thấy thú vị!"
+    "en": "Well, first of all, you made it here. I suppose that deserves some credit.\n\nThis is a little corner of the internet where I keep the photos I've taken, the moments I've stumbled upon, and the thoughts that occasionally cross my mind. Most of these things have never made it beyond my camera roll — and probably never would have, if I hadn't decided to put them here.\n\nNothing particularly special. Just bits and pieces of life, collected along the way.\n\nFeel free to wander around. I hope you find something you like.",
+    "vi": "Trước hết, xin dành một lời khen cho sự tò mò của bạn — vì đã dám bấm vào cái link không rõ nguồn gốc trong bio của tôi.\n\nĐây là nỗ lực của tôi nhằm đưa kho ảnh khổng lồ, vốn chưa từng có dịp khoe với ai ngoài vài người thân thiết, lên mạng. Thỉnh thoảng sẽ có thêm vài dòng suy nghĩ linh tinh.\n\nKhông có gì quá đặc biệt, chỉ là những thứ tôi muốn lưu lại đâu đó, thay vì để chúng nằm mãi trong máy.\n\nHy vọng bạn thấy thú vị!"
   },
   "banner": "/media/baner.jpg",
   "about": {
-    "en": "Hi, I'm Nguyen Viet Nhat\n\nA curious mind with an interest in science, materials, and semiconductor research. Currently pursuing a Ph.D. at the University of Tokyo, trying to understand how things work, one question at a time.\n\nOutside academia, I enjoy photography, exploring new places, and collecting little moments along the way.",
-    "vi": "Xin chào, mình là Nguyễn Việt Nhật.\n\nMình yêu thích khoa học, sự tò mò, và việc khám phá những điều mình chưa biết. Hiện tại, mình đang theo đuổi con đường nghiên cứu trong lĩnh vực khoa học vật liệu và bán dẫn, đồng thời bắt đầu hành trình học tập và nghiên cứu tiến sĩ tại Đại học Tokyo.\n\nNgoài phòng thí nghiệm, mình thích khám phá những nơi mới, chụp ảnh và lưu giữ những khoảnh khắc nhỏ trong cuộc sống. Có lẽ website này cũng là một cách để mình ghi lại hành trình ấy — cả những gì mình học được lẫn những gì mình tình cờ bắt gặp trên đường đi."
+    "en": "Hi, I'm **Nguyen Viet Nhat**.\n\nI'm a curious person who loves science and exploring what I don't yet know. I'm pursuing research in materials science and semiconductors, and I'm now starting my path toward a Ph.D. at the University of Tokyo.\n\nOutside the lab, I enjoy visiting new places, taking photos, and holding on to the small moments of everyday life. This website is one way of recording that journey — both what I learn and what I happen to stumble upon along the way.",
+    "vi": "Xin chào, mình là **Nguyễn Việt Nhật**.\n\nMình là người tò mò, yêu khoa học và thích khám phá những điều mình chưa biết. Hiện tại, mình theo đuổi con đường nghiên cứu khoa học vật liệu và bán dẫn, và đang bắt đầu hành trình hướng tới bậc tiến sĩ tại Đại học Tokyo.\n\nNgoài phòng thí nghiệm, mình thích đi đến những nơi mới, chụp ảnh và lưu giữ những khoảnh khắc nhỏ trong cuộc sống. Website này cũng là một cách để mình ghi lại hành trình ấy — cả những điều mình học được lẫn những gì tình cờ bắt gặp trên đường đi."
   },
   "about_photo": "/media/1793509025211_272168521145617572_3135731424112404198_f24a3c7d164dea91c9bf94cfc4e58fcd-1.jpg",
   "about_caption": {
-    "en": "..",
-    "vi": "Bức ảnh đầu tiên tại Đại học Tokyo (Todai)"
+    "en": "My first photo at the University of Tokyo (Todai)",
+    "vi": "Bức ảnh đầu tiên của mình tại Đại học Tokyo (Todai)"
   },
   "timeline": [
     {
       "date": "2026.10",
       "text": {
-        "en": "Started a new chapter at **The University of Tokyo**.",
-        "vi": "Bắt đầu chặng mới tại **Đại học Tokyo**."
+        "en": "Started a new chapter at **the University of Tokyo**.",
+        "vi": "Bắt đầu chặng đường mới tại **Đại học Tokyo**."
       }
     },
     {
-      "date": "2026.8",
+      "date": "2026.08",
       "text": {
-        "en": ".",
-        "vi": "Kết thúc trạng đường tại Đại học Bách khoa Hà Nội HUST"
+        "en": "Wrapped up my time at **Hanoi University of Science and Technology** (HUST).",
+        "vi": "Khép lại chặng đường tại **Đại học Bách khoa Hà Nội** (HUST)."
       }
     },
     {
       "date": "2025.12",
       "text": {
-        "en": ".",
-        "vi": "Bảo vệ luận văn thạc sĩ tại ĐH Bách khoa Hà Nội. Thật may mắn khi có điểm cao nhất lớp"
+        "en": "Defended my M.Sc. thesis at HUST — fortunate to receive the highest score in my class.",
+        "vi": "Bảo vệ luận văn thạc sĩ tại Đại học Bách khoa Hà Nội — thật may mắn khi đạt điểm cao nhất lớp."
       }
     }
   ],
@@ -66,26 +66,33 @@
   ],
   "research": [
     {
-      "date": "now",
+      "date": "2026–",
       "text": {
-        "en": "Electronics based on perovskite oxides at Utokyo",
-        "vi": "..."
+        "en": "Perovskite-oxide-based electronics — the University of Tokyo",
+        "vi": "Linh kiện điện tử trên nền vật liệu oxit perovskite — Đại học Tokyo"
       }
     },
     {
       "date": "2023–2025",
       "text": {
-        "en": "Nanomaterial gas sensors — M.Sc. research, HUST.",
-        "vi": "Cảm biến khí vật liệu nano —  Thạc sĩ, ĐH Bách khoa Hà Nội."
+        "en": "Nanomaterial-based gas sensors — M.Sc. research, HUST",
+        "vi": "Cảm biến khí trên nền vật liệu nano — nghiên cứu thạc sĩ, Đại học Bách khoa Hà Nội"
       }
     }
   ],
   "education": [
     {
-      "date": "2026/10-Now",
+      "date": "2026.10–",
       "text": {
-        "en": "**The University of Tokyo** — Anh Lab —TOPOLOGICAL QUANTUM ELECTRONICS LABORATORY",
-        "vi": "**Đại học Tokyo** — Anh Lab"
+        "en": "**The University of Tokyo** — Anh Lab (Topological Quantum Electronics Laboratory)",
+        "vi": "**Đại học Tokyo** — Anh Lab (Topological Quantum Electronics Laboratory)"
+      }
+    },
+    {
+      "date": "2024.10–2025.09",
+      "text": {
+        "en": "**The University of Osaka** — International Certificate Program: Nanoscience and Nanotechnology as Manufacturing Core",
+        "vi": "**Đại học Osaka** — Chương trình chứng chỉ quốc tế: Khoa học và Công nghệ Nano cho sản xuất (Nanoscience and Nanotechnology as Manufacturing Core)"
       }
     },
     {
@@ -96,17 +103,10 @@
       }
     },
     {
-      "date": "2024/10-2025-9",
+      "date": "2019–2023",
       "text": {
-        "en": "**University of Osaka** — Nanoscience and  Nanotechnology as Manufacturing Core",
-        "vi": "**Đại học Osaka** — Khoa học và công nghệ nano"
-      }
-    },
-    {
-      "date": "2019-2023",
-      "text": {
-        "en": "**Hanoi University of Science and Technology** —  B.a in Engineering Physics ",
-        "vi": "**Đại học Bách khoa Hà Nội** — Vật Lý Kĩ Thuật"
+        "en": "**Hanoi University of Science and Technology** — Bachelor's degree in Engineering Physics",
+        "vi": "**Đại học Bách khoa Hà Nội** — Cử nhân Vật lý Kỹ thuật"
       }
     }
   ],
@@ -118,33 +118,29 @@
         "vi": "khoa học"
       },
       "text": {
-        "en": "Will write this later.",
-        "vi": "Đang viết...."
+        "en": "Coming soon…",
+        "vi": "Đang viết…"
       }
     },
     {
       "label": {
-        "en": "life in japan",
-        "vi": "Cuộc sống ở Nhật"
+        "en": "life in Japan",
+        "vi": "cuộc sống ở Nhật"
       },
       "text": {
-        "en": "Updating...",
-        "vi": "Đang cập nhập..."
+        "en": "Coming soon…",
+        "vi": "Đang cập nhật…"
       }
     }
   ],
   "contacts": [
     {
       "label": "email",
-      "url": "Nhat20196429@gmail.com"
+      "url": "mailto:Nhat20196429@gmail.com"
     },
     {
       "label": "facebook",
       "url": "https://www.facebook.com/nhat.nguyenviet.735"
-    },
-    {
-      "label": "linkedin",
-      "url": "https://www.linkedin.com/in/USERNAME"
     }
   ],
   "show": {

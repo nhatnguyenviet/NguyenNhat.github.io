@@ -146,7 +146,7 @@ async function pageHome(site) {
   s.push(`<header>
       ${site.banner ? `<img class="banner" src="${esc(src(site.banner))}" alt="">` : ""}
       <h1>${esc(tr(site.site_title))}</h1>
-      <p class="lead">${esc(tr(site.tagline))}</p></header>`);
+      <div class="lead">${md(tr(site.tagline))}</div></header>`);
   if (show.timeline !== false && site.timeline?.length) s.push(`<section><h2>${U.recently}</h2>${datedList(site.timeline)}</section>`);
   if (show.highlights !== false && site.highlights?.length) s.push(`<section id="highlights"><h2>${U.highlights}</h2>
       ${site.highlights.map(h => {

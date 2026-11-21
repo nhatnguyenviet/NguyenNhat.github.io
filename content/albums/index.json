@@ -7,9 +7,9 @@
       "vi": "Tokyo"
     },
     "cover": "/media/1793509025211_272168521145617572_3135731424112404198_f24a3c7d164dea91c9bf94cfc4e58fcd.jpg",
-    "count": 3,
+    "count": 1,
     "from": "2026.10",
-    "to": "2026.11",
+    "to": "2026.10",
     "order": 1.0
   },
   {
@@ -19,23 +19,10 @@
       "en": "Osaka",
       "vi": "Osaka"
     },
-    "cover": "/media/osaka-1.svg",
-    "count": 3,
-    "from": "2026.12",
-    "to": "2027.01",
+    "cover": "/media/IMG20250822161118_01.jpg",
+    "count": 1,
+    "from": "2025.08",
+    "to": "2025.08",
     "order": 2.0
-  },
-  {
-    "slug": "hanoi",
-    "name": "Hanoi",
-    "title": {
-      "en": "Hanoi",
-      "vi": "Hà Nội"
-    },
-    "cover": "/media/photo-3.svg",
-    "count": 2,
-    "from": "2026",
-    "to": "2026",
-    "order": 3.0
   }
 ]

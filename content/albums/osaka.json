@@ -7,29 +7,18 @@
   "cover": "/media/IMG20250822161118_01.jpg",
   "order": 2,
   "description": {
-    "en": "[A few words about Osaka]",
-    "vi": "Chuyến đi nước ngoài đầu tiên của tôi, cũng là một dấu mốc đáng nhớ trong hành trình học tập và nghiên cứu.\n\nTôi có cơ hội tham gia chương trình trao đổi sinh viên sau đại học được tài trợ bởi Chính phủ Nhật Bản thông qua học bổng NEXUS. Trong chương trình năm đó, tôi là một trong hai sinh viên Việt Nam và một trong mười sinh viên đến từ Đông Nam Á nhận được học bổng.\n\nMột khởi đầu mới, một đất nước mới, và rất nhiều điều chưa biết đang chờ phía trước."
+    "en": "My first trip abroad, and a memorable milestone in my academic and research journey.\n\nI had the opportunity to join a graduate exchange program funded by the Japanese government through the NEXUS scholarship. That year, I was one of two students from Vietnam, and one of ten from Southeast Asia, to receive the scholarship.\n\nA new beginning, a new country, and so much still unknown waiting ahead.",
+    "vi": "Chuyến đi nước ngoài đầu tiên của tôi, và cũng là một dấu mốc đáng nhớ trong hành trình học tập và nghiên cứu.\n\nTôi có cơ hội tham gia chương trình trao đổi sinh viên sau đại học do Chính phủ Nhật Bản tài trợ thông qua học bổng NEXUS. Năm đó, tôi là một trong hai sinh viên Việt Nam, và một trong mười sinh viên Đông Nam Á, nhận được học bổng này.\n\nMột khởi đầu mới, một đất nước mới, và rất nhiều điều chưa biết đang chờ ở phía trước."
   },
   "moments": [
     {
-      "date": "2027.01",
+      "date": "2025.08",
       "title": {
-        "en": "[Second trip]",
-        "vi": "[Chuyến thứ hai]"
+        "en": "Osaka, August 2025",
+        "vi": "Osaka, tháng 8/2025"
       },
       "images": [
-        "/media/osaka-3.svg"
-      ]
-    },
-    {
-      "date": "2026.12",
-      "title": {
-        "en": "[First trip]",
-        "vi": "[Chuyến đầu tiên]"
-      },
-      "images": [
-        "/media/osaka-1.svg",
-        "/media/osaka-2.svg"
+        "/media/IMG20250822161118_01.jpg"
       ]
     }
   ]
